@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="-1" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="{description}" />
+        <meta name="author" content="Kapanlagi.com" />		
+
+        <!--
+        <link href="http://klios-asset.kapanlagi.com/css/bootstrap.css" rel="stylesheet" />
+        <link href="http://klios-asset.kapanlagi.com/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="http://klios-asset.kapanlagi.com/css/docs.css" rel="stylesheet" />
+        <link href="http://klios-asset.kapanlagi.com/js/google-code-prettify/prettify.css" rel="stylesheet" />
+        -->
+        <link rel="stylesheet" href="http://klios-asset.kapanlagi.com/css/klios-dev/v4/homepage.css" />
+	
+        <!--
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://klios-asset.kapanlagi.com/js/jquery-1.8.3.min.js"></script>
+        -->
+        <!-- HTML5 hack, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <title>Homepage | </title>    
+    </head>
+    <body data-offset="50" data-target=".subnav" data-spy="scroll">
+
+        <!-- Navbar -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                	<button class="btn btn-navbar collapsed" data-target=".nav-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav ">
+                        	
+                        </ul>
+						<ul class="nav pull-right">
+	<li class="divider-vertical"></li>
+	<li><a data-toggle="modal" href="#modal_login">Login</a></li>
+	<li><a class="brand" href="/"> </a></li>
+</ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="alert fade in" id="iLAlert">
+                <button type="button" class="close">&times;</button>
+                <span></span>
+            </div>
+        </div>
+        	<!--Login Popup-->
+	        			<div class="modal fade" id="modal_login" style="display: none;">
+			    <div class="modal-header">
+			    	<button class="close" data-dismiss="modal">x</button>
+			    	<h3>Login Form</h3>
+			    </div>
+			    <div class="modal-body">
+                    <div id="popup_login_cont">
+    			    	<form id="fr_login" class="form-horizontal" action="/homepage/userlogin/" method="POST" >
+    						<div class="control-group">
+    							<label class="control-label" for="inputUsr">UserName</label>
+    							<div class="controls">
+    								<input type="text" class="input-large" id="inputUsr" name="inputUsr">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<label class="control-label" for="inputPwd">Password</label>
+    							<div class="controls">
+    								<input type="password" class="input-large" id="inputPwd" name="inputPwd">
+    							</div>
+    						</div>
+                            <div class="control-group">
+                                <a class="bToogleForm pull-right">Forgot your password ?</a>
+                            </div>
+    					</form>
+                        <form id="fr_resetlogin" class="form-horizontal" action="/homepage/resetlogin/" method="POST" >
+    						<div class="control-group">
+                                <div class="alert alert-info">
+                                    <strong>Info : </strong>a notification will be send to your email below
+                                </div>
+    							<label class="control-label" for="inputUsr">eMail</label>
+    							<div class="controls">
+    								<input type="text" class="input-large" id="inputEmail" name="inputEmail">
+    							</div>
+    						</div>
+                            <div class="control-group">
+                                <a class="bToogleForm pull-right">Nevermind, I already remember it !</a>
+                            </div>
+    					</form>
+                    </div>
+			    </div>
+			    <div class="modal-footer">
+			    	<a href="#" class="btn" id="bClose" data-dismiss="modal">Close</a>
+			    	<a href="/homepage/userlogin/" class="btn btn-primary" id="bLogin">Login</a>
+                    <a href="/homepage/requestlogin/" class="btn btn-primary hide" id="bResetLogin">Send Request</a>
+                    <span id="sp-load-login" class="hide"><img src="http://klios-asset.kapanlagi.com/img/loading.gif" alt="loading" /> loading..</span>
+			    </div>
+			</div>
+			<!-- end of login popup -->
+        <!-- end of Navbar -->
+
+        <!-- Admdk Container -->
+        <div class="container">
+            <!-- Sub Menu  -->
+            
+            <!-- END Sub Menu -->
+            
+            <!--NOTIFICATION ALERT-->
+            <div class="alert hide" id="cAlert">
+                <strong></strong>
+            </div>
+            <!--END NOTIFICATION ALERT-->
+		</div>
+		
+            <!-- Content -->
+            <div class="ia-welcome">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span4">        		
+		        <div class="company-logo">
+		            <img src="http://cdn.klimg.com/kapanlagi.com/v5/i/channel/entertainment/KLlogo.png" alt="Kapanlagi Group Internal Application" style="width: 100%;" />
+		        </div>
+		    </div>
+		    
+		    <div class="span8 well">
+			    <div class="marketing">
+			        <h1>Welcome to Kapanlagi Internal System</h1>
+			        <p class="marketing-byline">System tool used to manage all internal requirements</p>
+			        <p class="marketing-byline ">
+						<a href="#modal_login" data-toggle="modal" class="btn btn-primary btn-large">Click here to login</a>
+					</p>
+			    </div>
+		    </div>
+		</div>
+	</div>
+</div>
+<!--<div class="bs-docs-social"></div>-->
+ 
+            <!-- end of Content -->
+            
+		<div class="container">
+            <!-- Footer -->
+            <br class="clearfix" />
+            <div class="footer">
+                <div>
+                    <a href="#" class="admdk-footer-back pull-right">Back to top</a>
+                    <div class="admdk-footer-center pull-left">
+                        <p><a href="/" target="_blank">kapanlagi.com</a> &copy; 2012 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of Footer -->
+
+        </div>
+        
+        <div id="modal_login" class="modal fade in div-load-overlay div-load-overlay-box" style="display: none;">
+            <div class="modal-header"></div>
+            <div class="modal-body"><img src="http://klios-asset.kapanlagi.com/img/bar-load.gif" /> Proses loading...</div>
+            <div class="modal-footer"></div>
+        </div>
+        <div id="overlayWrapper" class="div-load-overlay" style="display: none;"></div>
+
+		<!--<script src="http://klios-asset.kapanlagi.com/js/bootstrap.min.js"></script>-->
+        <script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+        <script src="http://klios-asset.kapanlagi.com/js/klios-dev/v5/homepage.js"></script>
+		
+
+    </body>
+</html>
